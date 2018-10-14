@@ -4,7 +4,7 @@ Tool to convert currency number to Thai text number
 
 ## Installation
 ```
-pip install bahttext
+pip install git+https://github.com/lifez/bahttext
 ```
 
 ## Usage
