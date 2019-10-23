@@ -32,7 +32,7 @@ class TestBahtText(unittest.TestCase):
         self.assertEqual(bahttext(11.0), 'สิบเอ็ดบาทถ้วน')
         self.assertEqual(bahttext(15.0), 'สิบห้าบาทถ้วน')
 
-    def test_input_one_interger_wth_decimal_can_convert(self):
+    def test_input_one_integer_wth_decimal_can_convert(self):
         self.assertEqual(bahttext(1.10), 'หนึ่งบาทสิบสตางค์')
         self.assertEqual(bahttext(2.50), 'สองบาทห้าสิบสตางค์')
         self.assertEqual(bahttext(3.75), 'สามบาทเจ็ดสิบห้าสตางค์')
