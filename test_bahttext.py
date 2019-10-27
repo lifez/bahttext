@@ -83,7 +83,13 @@ class TestBahtText(unittest.TestCase):
         self.assertEqual(bahttext(-1.10), 'ลบหนึ่งบาทสิบสตางค์')
         self.assertEqual(bahttext(-1000.0), 'ลบหนึ่งพันบาทถ้วน')
         self.assertEqual(
-            bahttext(-258065.81), 'ลบสองแสนห้าหมื่นแปดพันหกสิบห้าบาทแปดสิบเอ็ดสตางค์')
+            bahttext(-258065.81), 'ลบสองแสนห้าหมื่นแปดพันหกสิบห้าบาทแปดสิบเอ็ดสตางค์'
+        )
+
+    def test_fraction_number_should_not_have_tuan(self):
+        self.assertEqual(bahttext(12000000.0), 'สิบสองล้านบาทถ้วน')
+        self.assertNotEqual(bahttext(12000000.0), 'สิบสองล้านบาทสตางค์')
+
 
 if __name__ == '__main__':
     unittest.main()
